@@ -1,4 +1,4 @@
-/*--import React from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as firebase from 'firebase';
 import { Input } from './components/Input';
@@ -26,8 +26,8 @@ export default class App extends React.Component {
 			placeholder='Enter your first and last name...'
 			label = 'Full Name'
 			onChangeText={fullname => this.setState({fullname})}
-			value={this.state.password}	
-		/>
+			value={this.state.password}
+				/>
 		<Input
           placeholder='Enter your university email...'
           label='Email'
@@ -53,9 +53,7 @@ export default class App extends React.Component {
           onChangeText={password => this.setState( { password } )}
           value={this.state.password}
         />
-		<Input
-			placeholder='
-        <Button onPress={validateLogin()}>Log In</Button>
+        <Button>Log In</Button>
       </View>
     );
   }
@@ -68,22 +66,24 @@ const styles = StyleSheet.create({
     padding: 20,
   },
 });
-*/
 
 
-import React, {Component} from 'react';
+
+/*import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as firebase from 'firebase';
 import t from 'tcomb-form-native';
 
-const Form = t.form.Form
+const Form = t.form.Form;
 
-export default class App extends Component{
+export default class App extends Component {
+
 	handleSubmit = () => {
 		const value = this._form.getValue();
 		console.log('value: ', value);
 	}
-}
+
+
 
 const User = t.struct({
 	email: t.String,
@@ -95,22 +95,22 @@ const User = t.struct({
 
   render() {
     return (
-      <View style={styles.container}>
-		<Form 
-		ref={c => this._form = c}
-		type={User} 
-		options={options}
-		/>
-		<Button
-			titel="Sign Up"
-			onPress={this.handleSubmit}
-		/>
-	</View>
-        <Input
+    <View style={styles.container}>
+			<Form
+			ref={c => this._form = c}
+			type={User}
+			options={options}
+			/>
+			<Button
+				title="Sign Up"
+				onPress={this.handleSubmit}
+			/>
+		</View>
+		<Input
 			placeholder='Enter your first and last name...'
 			label = 'Full Name'
 			onChangeText={fullname => this.setState({fullname})}
-			value={this.state.password}	
+			value={this.state.fullname}
 		/>
 		<Input
           placeholder='Enter your university email...'
@@ -128,22 +128,23 @@ const User = t.struct({
 			placeholder='Enter Phone Number of Contact'
 			label='Phone Number'
 			onChangeText={phone => this.setState({phone})}
-			value={this.state.id}
+			value={this.state.phone}
 		/>
-        <Input
-          placeholder='Enter your password...'
-          label='Password'
-          secureTextEntry
-          onChangeText={password => this.setState( { password } )}
-          value={this.state.password}
-        />
+    <Input
+      placeholder='Enter your password...'
+      label='Password'
+      secureTextEntry
+      onChangeText={password => this.setState( { password } )}
+      value={this.state.password}
+    />
         <Button onPress={validateLogin()}>Log In</Button>
       </View>
     );
  }
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-});
+});*/
